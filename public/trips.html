@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trips</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Travlr Getaways - Trips</h1>
+  </header>
+  <main>
+    <section id="trip-list">
+      <h2>Available Trips</h2>
+      <ul>
+        <li>Gale Reef - $200 - A beautiful coral reef.</li>
+        <li>Dawson’s Reef - $150 - A secluded underwater paradise.</li>
+        <li>Claire’s Reef - $180 - A colorful marine ecosystem.</li>
+      </ul>
+    </section>
+    <section id="add-trip">
+      <h2>Add a New Trip</h2>
+      <form id="trip-form">
+        <label for="tripName">Trip Name:</label>
+        <input type="text" id="tripName" name="tripName" required>
+        
+        <label for="tripPrice">Price:</label>
+        <input type="number" id="tripPrice" name="tripPrice" required>
+        
+        <label for="tripDescription">Description:</label>
+        <input type="text" id="tripDescription" name="tripDescription" required>
+        
+        <button type="submit">Add Trip</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Travlr Getaways. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
