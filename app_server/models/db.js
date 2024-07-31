@@ -50,5 +50,5 @@ process.on("SIGTERM", () => {
 });
 
 connect();
-require("./models/travlr");
+require("./travlr.js");
 module.exports = mongoose;
