@@ -71,19 +71,18 @@ const tripsUpdateTrip = async (req, res) => {
       perPerson: req.body.perPerson,
       image: req.body.image,
       description: req.body.description,
-    }
+    },
+    { new: true } // This option returns the updated document
   ).exec();
   if (!q) {
     // Database returned no data
-    return res.status(400).json(err);
+    return res.status(404).json({ error: "Trip not found" });
   } else {
     // Return resulting updated trip
-    return res.status(201).json(q);
+    return res.status(200).json(q);
   }
   // Uncomment the following line to show results of operation
 };
-// on the console
-// console.log(q);
 
 module.exports = {
   tripsList,
