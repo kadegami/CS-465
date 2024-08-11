@@ -12,7 +12,7 @@ import { User } from '../models/user';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   public formError: string = '';
   submitted = false;
   credentials = {
@@ -42,9 +42,11 @@ export class LoginComponent implements OnInit {
       name: this.credentials.name,
       email: this.credentials.email,
     } as User;
-
+    // console.log(this.credentials)
     this.authenticationService.login(newUser, this.credentials.password);
+    //console.log('next step');
     if (this.authenticationService.isLoggedIn()) {
+      console.log('Router::Direct');
       this.router.navigate(['']);
     } else {
       var timer = setTimeout(() => {

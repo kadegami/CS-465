@@ -20,7 +20,7 @@ export class AuthenticationService {
     let out: any;
     out = this.storage.getItem('travlr-token');
     // Make sure we return a string even if we don't have a token if(!out)
-    {
+    if (!out) {
       return '';
     }
     return out;
@@ -32,9 +32,11 @@ export class AuthenticationService {
     this.storage.removeItem('travlr-token');
   }
   public isLoggedIn(): boolean {
+    // console.log('isLoggedIn');
     const token: string = this.getToken();
     if (token) {
       const payload = JSON.parse(atob(token.split('.')[1]));
+      //console.log('token exists');
       return payload.exp > Date.now() / 1000;
     } else {
       return false;
