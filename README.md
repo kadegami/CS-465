@@ -1,5 +1,5 @@
-README: Travlr Getaways Full Stack Web Application
-Overview
+README: 
+Travlr Getaways Full Stack Web Application
 This project is a full stack web application designed to serve both customer-facing and administrative functionalities for the Travlr Getaways 
 platform. The final iteration included secure login authentication for the admin panel, enhancing the overall security of the application. 
 Below, I reflect on the architecture, functionality, testing processes, and the skills I have developed throughout the course of this project.
@@ -21,19 +21,22 @@ The backend of the application leverages a NoSQL MongoDB database. MongoDB was c
 unstructured data, which aligns well with the varying data requirements of the Travlr Getaways platform. Its schema-less nature allows for
 rapid development and iteration, which is crucial in agile environments.
 
-Functionality
+Functionality: 
+
 JSON and Its Role in Full Stack Development
 JSON (JavaScript Object Notation) serves as the primary data interchange format between the frontend and backend. Unlike 
 JavaScript, which is a programming language, JSON is a lightweight format for structuring data. It ties together the frontend
 and backend by allowing data to be easily passed and parsed between client and server, facilitating seamless communication in the application.
 
-Refactoring for Improved Functionality
+Refactoring for Improved Functionality:
+
 Throughout the development process, I refactored several parts of the codebase to improve functionality and efficiency. For instance, 
 I optimized the reusable UI components by abstracting common elements into separate modules. This approach not only reduced redundancy 
 but also made the application easier to maintain and extend. Reusable components are beneficial because they promote consistency across 
 the application and speed up development by allowing code to be reused across multiple parts of the project.
 
-Testing
+Testing: 
+
 API Testing and Security Challenges
 Testing in a full stack application requires a comprehensive approach, particularly when it involves methods for request and retrieval. 
 During the testing phase, I focused on ensuring that the API endpoints correctly handled requests and provided the expected responses.
