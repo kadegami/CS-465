@@ -1,0 +1,31 @@
+{{!-- Enhanced Trip Info View for CS-499 Databases --}}
+{{!-- Author: Karina Washington --}}
+
+<h1>{{trip.name}}</h1>
+
+<p><strong>Code:</strong> {{trip.code}}</p>
+<p><strong>Resort:</strong> {{trip.resort}}</p>
+<p><strong>Length:</strong> {{trip.length}} days</p>
+<p><strong>Price per Person:</strong> ${{trip.perPerson}}</p>
+<p><strong>Start Date:</strong> {{formatDate trip.start}}</p>
+
+{{#if trip.description}}
+  <h3>Description</h3>
+  <p>{{trip.description}}</p>
+{{/if}}
+
+{{#if trip.createdAt}}
+  <p><em>Record Created:</em> {{formatDate trip.createdAt}}</p>
+{{/if}}
+
+<hr>
+
+{{#if errors}}
+  <h3 style="color: red;">Validation Errors</h3>
+  <ul>
+    {{#each errors}}
+      <li>{{this.message}}</li>
+    {{/each}}
+  </ul>
+{{/if}}
+
